@@ -1,6 +1,6 @@
 {
   "name": "@boobafetes/easy-create-app",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "keywords": [
     "easy",
@@ -11,12 +11,13 @@
     "library",
     "generator"
   ],
-  "main": "dist/src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "cli": "yarn build && node ./dist/index.js",
     "start": "npx tsc --build --watch",
     "build": "npx tsc --build",
-    "test": "yarn test"
+    "test": "yarn test",
+    "publish": "npm login && npm publish"
   },
   "author": "axel.rolandgosselin@gmail.com",
   "homepage": "https://github.com/BoobaFetes/create-worskspace-cli",
@@ -40,6 +41,6 @@
     "registry": "https://registry.npmjs.org/"
   },
   "bin": {
-    "easy-create-app": "./dist/index.js"
+    "easy-create-app": "dist/index.js"
   }
 }
