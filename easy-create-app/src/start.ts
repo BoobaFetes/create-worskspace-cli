@@ -11,6 +11,11 @@ export const start = (settings: ICliSettings) => {
 
   setup(program, settings);
 
+  if (!process.argv.slice(2).length) {
+    program.outputHelp();
+    return;
+  }
+
   program.parse(process.argv);
 
   const options = program.opts();
