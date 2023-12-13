@@ -19,6 +19,7 @@
     "test": "yarn test"
   },
   "author": "axel.rolandgosselin@gmail.com",
+  "homepage": "https://github.com/BoobaFetes/create-worskspace-cli",
   "license": "MIT",
   "dependencies": {
     "commander": "^11.1.0",
