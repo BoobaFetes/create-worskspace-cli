@@ -1,6 +1,6 @@
 {
   "name": "@boobafetes/easy-create-app",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "",
   "keywords": [
     "easy",
@@ -16,8 +16,7 @@
     "cli": "yarn build && node ./dist/index.js",
     "start": "npx tsc --build --watch",
     "build": "npx tsc --build",
-    "test": "yarn test",
-    "publish": "npm login && npm publish"
+    "test": "yarn test"
   },
   "author": "axel.rolandgosselin@gmail.com",
   "homepage": "https://github.com/BoobaFetes/create-worskspace-cli",
