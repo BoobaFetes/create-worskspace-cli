@@ -1,0 +1,44 @@
+{
+  "name": "@boobafetes/easy-create-app",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "easy",
+    "create",
+    "typescript",
+    "react",
+    "app",
+    "library",
+    "generator"
+  ],
+  "main": "dist/src/index.js",
+  "scripts": {
+    "cli": "yarn build && node ./dist/index.js",
+    "start": "npx tsc --build --watch",
+    "build": "npx tsc --build",
+    "test": "yarn test"
+  },
+  "author": "axel.rolandgosselin@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.1.0",
+    "figlet": "^1.7.0"
+  },
+  "devDependencies": {
+    "@types/figlet": "^1.5.8",
+    "@types/node": "^20.10.4",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "eslint-config-standard-with-typescript": "^42.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-promise": "^6.0.0",
+    "ts-node": "^10.9.2",
+    "typescript": "*"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "bin": {
+    "easy-create-app": "./dist/index.js"
+  }
+}

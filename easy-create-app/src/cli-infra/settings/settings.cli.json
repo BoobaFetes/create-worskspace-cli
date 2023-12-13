@@ -1,0 +1,29 @@
+{
+  "name": "easy-create-app",
+  "description": "'easy-create-app' cli helps to create a react app in a monorepo. Project use clean architecture and are ready to debug and publish.",
+  "version": "1.0.0",
+  "command": {
+    "schema": {
+      "options": [
+        {
+          "flags": "-l, --list",
+          "description": "list all schema available"
+        }
+      ]
+    },
+    "create": {
+      "argument": {
+        "name": "<string>",
+        "description": "the name of the schema to use"
+      },
+      "options": []
+    },
+    "update": {
+      "argument": {
+        "name": "<string>",
+        "description": "the name of the schema to use"
+      },
+      "options": []
+    }
+  }
+}
