@@ -11,7 +11,11 @@
       "skipFiles": ["<node_internals>/**"],
       "program": "${workspaceFolder}/dist/index.js",
       "outFiles": ["${workspaceFolder}/**/*.js"],
-      "args": ["schema", "get"]
+      "args": [
+        "schema",
+        "get",
+        "C:/Users/hyper/source/repos/github/create-worskspace-cli/template"
+      ]
     }
   ]
 }
