@@ -1,8 +1,8 @@
-import { CliSettingsCommand } from './CliSettingsCommand';
+import { CliSettingsRootCommands } from "./CliSettingsRootCommands";
 
 export interface ICliSettings {
   name: string;
   description: string;
   version: string;
-  command: CliSettingsCommand;
+  commands: CliSettingsRootCommands;
 }

@@ -1,22 +1,17 @@
 import { Command } from "commander";
-import { ICliSettings } from "../../cli-domain";
+import { ActionByCommandType } from "../../cli-application";
+import { ICliSettings, ICliSettingsCommand } from "../../cli-domain";
+import { addCommand } from "./addCommand";
 
-export const Commands = (cli: Command, settings: ICliSettings) => {
-  for (const name in settings.command) {
-    const _name = name as keyof ICliSettings["command"];
+export const Commands = (
+  cli: Command,
+  settings: ICliSettings,
+  action: ActionByCommandType
+) => {
+  for (const name in settings.commands) {
+    const _name = name as keyof ICliSettings["commands"];
+    const current = settings.commands[_name] as ICliSettingsCommand;
 
-    const command = settings.command[_name];
-    cli.command(_name);
-
-    if (command.argument) {
-      cli.argument(
-        command.argument.name,
-        command.argument.description,
-        command.argument.defaultValue
-      );
-    }
-    command.options?.forEach((o) =>
-      cli.option(o.flags, o.description, o.defaultValue)
-    );
+    addCommand(cli, name, current, action);
   }
 };
