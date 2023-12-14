@@ -7,7 +7,11 @@
       "description": "get or validate template of schema",
       "commands": {
         "get": {
-          "description": "get template of schema"
+          "description": "get template of schema",
+          "argument": {
+            "name": "<string>",
+            "description": "the folder where template will be copied"
+          }
         },
         "validate": {
           "description": "validate template of schema",
