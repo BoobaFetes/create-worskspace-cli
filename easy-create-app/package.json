@@ -15,8 +15,9 @@
   "scripts": {
     "cli:all": "yarn build && node ./dist/index.js",
     "cli:run": "node ./dist/index.js",
+    "cli:clean": "rimraf dist",
     "start": "npx tsc --build --watch",
-    "build": "npx tsc --build",
+    "build": "yarn cli:clean && npx tsc --build",
     "test": "yarn test"
   },
   "author": "axel.rolandgosselin@gmail.com",
@@ -24,7 +25,10 @@
   "license": "MIT",
   "dependencies": {
     "commander": "^11.1.0",
-    "figlet": "^1.7.0"
+    "figlet": "^1.7.0",
+    "jsonschema": "^1.4.1",
+    "node": "^21.2.0",
+    "prettier": "^3.1.1"
   },
   "devDependencies": {
     "@types/figlet": "^1.5.8",
